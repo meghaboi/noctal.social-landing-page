@@ -1,0 +1,20 @@
+{
+  "name": "noctal.social-landing-page",
+  "version": "1.0.0",
+  "description": "Premium dithered nightlife platform web experience",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "nightlife",
+    "dither",
+    "webgl",
+    "social"
+  ],
+  "author": "Noctal Team",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
