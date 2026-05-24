@@ -153,11 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // Prepare scroll container
       tl.to("#scroll-container", { opacity: 1, y: 0, duration: 0.1 }, "-=1.1");
       
-      // Staggered reveal of hero text/elements
+      // Staggered reveal of hero text/elements (using clearProps to prevent mobile GPU vanishing bugs)
       tl.from(".navbar", { y: -30, opacity: 0, duration: 1.3, ease: "power3.out" }, "-=0.8");
-      tl.from(".editorial-sub", { x: -20, opacity: 0, duration: 1.1, ease: "power3.out" }, "-=0.8");
-      tl.from(".hero-title", { y: 45, opacity: 0, duration: 1.6, ease: "power4.out" }, "-=0.7");
-      tl.from(".vague-terminal", { y: 25, opacity: 0, duration: 1.3, ease: "power3.out" }, "-=0.5");
+      tl.from(".editorial-sub", { x: -20, opacity: 0, duration: 1.1, ease: "power3.out", clearProps: "all" }, "-=0.8");
+      tl.from(".hero-title", { y: 45, opacity: 0, duration: 1.6, ease: "power4.out", clearProps: "all" }, "-=0.7");
+      tl.from(".vague-terminal", { y: 25, opacity: 0, duration: 1.3, ease: "power3.out", clearProps: "all" }, "-=0.5");
       
       // Gorgeous 3D reveal of the Hyderabad CRT Screen element
       tl.from(".crt-screen", { 
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.masterGain.connect(this.ctx.destination);
       
       // Load real progressive electronic party track loop!
-      this.audio = new Audio("https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3");
+      this.audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3");
       this.audio.loop = true;
       this.audio.crossOrigin = "anonymous";
       

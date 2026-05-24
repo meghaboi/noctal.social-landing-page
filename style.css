@@ -442,6 +442,9 @@ section {
   letter-spacing: -0.02em;
   color: var(--text-pure);
   margin-bottom: 1.5rem;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hero-title span.italicized {
@@ -461,6 +464,9 @@ section {
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .vague-header {
@@ -716,6 +722,9 @@ section {
   
   .navbar {
     padding: 1.2rem 2rem;
+    background: rgba(4, 4, 6, 0.96) !important; /* Solid dark background to prevent backdrop-filter painting glitches */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
   
   section {
